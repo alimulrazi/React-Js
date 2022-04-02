@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import About from "../components/About";
+import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Home from "../components/Home";
 import Services from "../components/Services";
@@ -24,7 +25,7 @@ export class Header extends Component{
                         <li><Link className="nav-link scrollto" to="services">Services</Link></li>
                         <li><Link className="nav-link scrollto" to="portfolio">Portfolio</Link></li>
                         <li><Link className="nav-link scrollto" to="team">Team</Link></li>
-                        <li><Link to="blog.html">Blog</Link></li>
+                        <li><Link to="blog">Blog</Link></li>
                         <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
                             <ul>
                             <li><a href="#">Drop Down 1</a></li>
@@ -55,6 +56,7 @@ export class Header extends Component{
                  <Route exact path='/' element={< Home />}></Route>
                  <Route exact path='/about' element={< About />}></Route>
                  <Route exact path='/services' element={< Services />}></Route>
+                 <Route exact path='/blog' element={< Blog />}></Route>
                  <Route exact path='/team' element={< Team />}></Route>
                  <Route exact path='/portfolio' element={< Portfolio />}></Route>
                  <Route exact path='/contact-us' element={< Contact />}></Route>
